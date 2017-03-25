@@ -22,9 +22,9 @@ namespace GameCraft.Controllers.API
         //GET /api/customers
         public IHttpActionResult  GetCustomers()
         {
-            var customers = _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
+            var customersDTos = _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
 
-            return Ok (customers);
+            return Ok (customersDTos);
         }
 
         // GET /api/customers/1

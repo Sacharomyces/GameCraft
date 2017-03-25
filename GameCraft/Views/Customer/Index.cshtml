@@ -6,13 +6,8 @@
     ViewBag.Title = "title";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h2>Klienci</h2>
 
-@if (!Model.Any())
-{
-    <p>Nie mamy zarejestrowanych klientów:(</p>
-}
-else
-{
     <table id="customers" class="table table-bordered table-hover">
         <thead>
             <tr>
@@ -22,47 +17,60 @@ else
             </tr>
         </thead>
         <tbody>
-
-            @foreach (var customer in Model)
-            {
-                <tr>
-                    <td>@Html.ActionLink(customer.Name, "Edit", "Customer", new { customer.Id }, null)</td>
-                    <td>@customer.MembershipType.Name</td>
-                    <td>
-                        <button data-customer-id="@customer.Id" class="btn-link js-delete">Usuń</button>
-                    </td>
-                </tr>
-            }
-
         </tbody>
     </table>
-}
+
 
 @section scripts
 {
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
 
-            $("#customers").DataTable();
-
-            $("#customers").on("click","js-delete", function () {
-                var button = $(this);
-
-                bootbox.confirm("Czy na pewno chcesz usunąć klienta?",
-                    function(result) 
+            $("#customers").DataTable({
+                ajax: {
+                    url: "api/customers",
+                    dataSrc: ""
+                },
+                columns: [
                     {
-                        if (result) {
-                            $.ajax({
-                                url: "/api/customers/" + button.attr("data-customer-id"),
-                                method: "DELETE",
-                                success: function () {
-                                    button.parents("tr").remove();
-                                }
-                            });
+                        data: "name",
+                        render: function(data, type, customer) {
+                            return "<a href='/customer/edit/" + customer.id + "'>" + customer.name + "</a>";
                         }
-                    });
+                    },
+                    {
+                        data: "name"
+                    },
+                    {
+                        data: "id",
+                        render: function(data) {
+                            return "<button class= 'btn-link js-delete' data-customer-id=" + data + ">Delete</button>";
+                        }
+                    }
+                ]
+
+            });
+
+
+            $("#customers").on("click",
+                "js-delete",
+                function() {
+                    var button = $(this);
+
+                    bootbox.confirm("Czy na pewno chcesz usunąć klienta?",
+                        function(result) {
+                            if (result) {
+                                $.ajax({
+                                    url: "/api/customers/" + button.attr("data-customer-id"),
+                                    method: "DELETE",
+                                    success: function() {
+                                        button.parents("tr").remove();
+                                    }
+                                });
+                            }
+                        });
 
                 });
-           });
+        });
     </script>
 }
