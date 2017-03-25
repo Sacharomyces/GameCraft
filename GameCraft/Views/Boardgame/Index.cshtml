@@ -1,0 +1,30 @@
+﻿@using GameCraft.Controllers
+@using GameCraft.Models
+@model IEnumerable<Boardgame>
+@{
+    ViewBag.Title = "BoardgameList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Gry Planszowe</h2>
+<p>
+@Html.ActionLink("Dodaj grę", "New", "Boardgame", new { @class = "btn btn-primary" })
+</p>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Kategoria</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var boardgame in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(boardgame.Name,"Edit","Boardgame",new {id = boardgame.Id},null)</td>
+                <td>@boardgame.Genre.Name</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

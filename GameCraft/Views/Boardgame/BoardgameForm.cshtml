@@ -1,0 +1,55 @@
+﻿@using GameCraft.Models
+@model GameCraft.ViewModels.BoardgamesFormViewModel
+@{
+    ViewBag.Title = "BoardgameForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.Id == null)
+{
+    <h2>Nowa Gra Planszowa</h2>
+}
+else
+{
+    <h2>@Model.Name</h2>
+}
+
+@using (@Html.BeginForm("Save","Boardgame"))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(m=>m.Name)
+        @Html.TextBoxFor(m => m.Name, new {@class="form-control"})
+        @Html.ValidationMessageFor(m=>m.Name)
+    </div> 
+    <div class="form-group">
+        @Html.Label("Wypełnij")
+        @Html.DropDownListFor(m => m.GenreId, new SelectList(Model.Genres,"Id","Name"),"wybierz kategorię...", new { @class="form-control"})
+        @Html.ValidationMessageFor(m => m.GenreId)
+    </div>
+    <div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.MinPlayerNumber)
+            @Html.TextBoxFor(m => m.MinPlayerNumber, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.MinPlayerNumber)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.MaxPlayerNumber)
+            @Html.TextBoxFor(m => m.MaxPlayerNumber, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.MaxPlayerNumber)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.InStock)
+        @Html.TextBoxFor(m => m.InStock, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.InStock)
+    </div>
+    @Html.HiddenFor(m =>m.Id)
+    @Html.AntiForgeryToken()
+    <button type ="submit" class="btn btn-primary">Zapisz</button>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/ bundles / jqueryval")
+}
