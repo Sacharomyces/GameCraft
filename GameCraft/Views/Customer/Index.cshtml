@@ -26,7 +26,7 @@
     <script>
         $(document).ready(function() {
 
-            $("#customers").DataTable({
+            var table = $("#customers").DataTable({
                 ajax: {
                     url: "api/customers",
                     dataSrc: ""
@@ -44,7 +44,7 @@
                     {
                         data: "id",
                         render: function(data) {
-                            return "<button class= 'btn-link js-delete' data-customer-id=" + data + ">Delete</button>";
+                            return "<button class= 'btn-link js-delete' data-customer-id=" + data + ">Usuń</button>";
                         }
                     }
                 ]
@@ -53,7 +53,7 @@
 
 
             $("#customers").on("click",
-                "js-delete",
+                ".js-delete",
                 function() {
                     var button = $(this);
 
@@ -64,12 +64,11 @@
                                     url: "/api/customers/" + button.attr("data-customer-id"),
                                     method: "DELETE",
                                     success: function() {
-                                        button.parents("tr").remove();
+                                        table.row(button.parents("tr")).remove().draw();
                                     }
                                 });
                             }
                         });
-
                 });
         });
     </script>
