@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Data.Entity;
 using AutoMapper;
 using GameCraft.Dtos;
 using GameCraft.Models;
@@ -22,7 +23,10 @@ namespace GameCraft.Controllers.API
         //GET /api/customers
         public IHttpActionResult  GetCustomers()
         {
-            var customersDTos = _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
+            var customersDTos = _context.Customers
+                .Include(c=>c.MembershipType)
+                .ToList()
+                .Select(Mapper.Map<Customer, CustomerDto>);
 
             return Ok (customersDTos);
         }

@@ -16,6 +16,8 @@ namespace GameCraft.Dtos
         public bool IsSubscribedToNewsletter { get; set; }
 
         public byte MembershipTypeId { get; set; }
+        public MembershipTypeDto MembershipType { get; set; } //this property has to have the same name as customer property to be properly mapped with automapper
+
 
         //[ValidationMin18Years]
         public DateTime? BirthDate { get; set; }

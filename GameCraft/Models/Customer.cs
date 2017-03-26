@@ -9,6 +9,7 @@ namespace GameCraft.Models
     public class Customer
     {
         public int Id { get; set; }
+
         [Required(ErrorMessage = "Pole wymagane")]
         public string Name { get; set; }
         public bool IsSubscribedToNewsletter { get; set; }
