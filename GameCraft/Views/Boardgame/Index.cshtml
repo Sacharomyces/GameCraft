@@ -9,22 +9,44 @@
 <p>
 @Html.ActionLink("Dodaj grę", "New", "Boardgame", new { @class = "btn btn-primary" })
 </p>
-<table class="table table-bordered table-hover">
+<table id="boardgames" class="table table-bordered table-hover">
     <thead>
-        <tr>
-            <th>Tytuł</th>
-            <th>Kategoria</th>
-        </tr>
+    <tr>
+        <th>Tytuł</th>
+        <th>Kategoria</th>
+    </tr>
     </thead>
     <tbody>
 
-        @foreach (var boardgame in Model)
-        {
-            <tr>
-                <td>@Html.ActionLink(boardgame.Name,"Edit","Boardgame",new {id = boardgame.Id},null)</td>
-                <td>@boardgame.Genre.Name</td>
-            </tr>
-        }
+    @foreach (var boardgame in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(boardgame.Name,"Edit","Boardgame",new {id = boardgame.Id},null)</td>
+            <td>@boardgame.Genre.Name</td>
+        </tr>
+    }
 
     </tbody>
 </table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+
+            var table = $("#boardgames").DataTable();
+
+
+        });
+          
+            
+
+        
+
+
+
+    </script>  
+    
+    
+
+}
