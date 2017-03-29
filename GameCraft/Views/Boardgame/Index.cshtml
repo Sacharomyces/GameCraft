@@ -14,18 +14,12 @@
     <tr>
         <th>Tytuł</th>
         <th>Kategoria</th>
+        <th>Liczba graczy</th>
+        <th>Usuń</th>
+        
     </tr>
     </thead>
     <tbody>
-
-    @foreach (var boardgame in Model)
-    {
-        <tr>
-            <td>@Html.ActionLink(boardgame.Name,"Edit","Boardgame",new {id = boardgame.Id},null)</td>
-            <td>@boardgame.Genre.Name</td>
-        </tr>
-    }
-
     </tbody>
 </table>
 
@@ -34,19 +28,63 @@
     <script>
         $(document).ready(function() {
 
-            var table = $("#boardgames").DataTable();
+            var table = $("#boardgames").DataTable({
+                ajax: {
+                    url: "/api/boardgames",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function(data,type,boardgame) {
+                            return "<a href='/boardgame/edit/" + boardgame.id + "'>" + data + "</a>";
+                        }
 
+                    },
+                    {
+                        data:"name"
+                    },
+                    {
+                        
+                        render: function(data,type,boardgame) {
+                            return boardgame.minPlayerNumber + " - " + boardgame.maxPlayerNumber;
+                        }
+
+                    },
+                    {
+                        data: "id",
+                        render: function(data) {
+                            return "<button class= 'btn-link js-delete' data-boardgame-id="+data+">Usuń</button>";
+                        }
+                    }
+                ]
+            });
+
+            $("#boardgames").on("click",".js-delete",function() {
+
+                    var button = (this);
+
+                    bootbox.confirm("Czy napewno chcesz usunąć grę?",
+                        function(result) {
+                            if (result) {
+                                $.ajax({
+                                    url: "/api/boardgames/"+button.attr("data-boardgame-id"),
+                                    method: "DELETE",
+                                    success: function() {
+                                        table.row(button.parents("tr")).remove().draw();
+                                    }
+
+                                });
+                            }
+                        });
+
+                });
 
         });
-          
-            
-
-        
 
 
+    </script>
 
-    </script>  
-    
-    
+
 
 }

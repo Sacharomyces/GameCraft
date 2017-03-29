@@ -28,7 +28,7 @@
 
             var table = $("#customers").DataTable({
                 ajax: {
-                    url: "api/customers",
+                    url: "/api/customers",
                     dataSrc: ""
                 },
                 columns: [
@@ -52,9 +52,8 @@
             });
 
 
-            $("#customers").on("click",
-                ".js-delete",
-                function() {
+            $("#customers").on("click", ".js-delete", function () {
+
                     var button = $(this);
 
                     bootbox.confirm("Czy na pewno chcesz usunąć klienta?",
