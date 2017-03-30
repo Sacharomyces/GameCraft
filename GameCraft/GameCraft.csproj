@@ -278,6 +278,10 @@
     <Compile Include="Migrations\201703051606236_ChangeEkonomiczneGenreValue-force.Designer.cs">
       <DependentUpon>201703051606236_ChangeEkonomiczneGenreValue-force.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703302220329_seedUserRoles.cs" />
+    <Compile Include="Migrations\201703302220329_seedUserRoles.Designer.cs">
+      <DependentUpon>201703302220329_seedUserRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Boardgame.cs" />
@@ -646,6 +650,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703051606236_ChangeEkonomiczneGenreValue-force.resx">
       <DependentUpon>201703051606236_ChangeEkonomiczneGenreValue-force.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703302220329_seedUserRoles.resx">
+      <DependentUpon>201703302220329_seedUserRoles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
