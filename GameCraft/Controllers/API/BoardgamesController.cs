@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Http.Results;
 using AutoMapper;
 using GameCraft.Dtos;
+using System.Data.Entity;
 using GameCraft.Models;
 
 namespace GameCraft.Controllers.API
@@ -20,7 +21,7 @@ namespace GameCraft.Controllers.API
         }
         public IHttpActionResult GetBoardgames()
         {
-            var boardgames = _context.Boardgames.ToList().Select(Mapper.Map<Boardgame,BoardgameDto>);
+            var boardgames = _context.Boardgames.Include(b=>b.Genre).ToList().Select(Mapper.Map<Boardgame,BoardgameDto>);
 
             return Ok(boardgames);
         }

@@ -18,6 +18,8 @@ namespace GameCraft.Dtos
             [Required(ErrorMessage = "Pole Wymagane")]
             public byte GenreId { get; set; }
 
+            public GenreDto Genre { get; set; }
+
             [Range(1, 10, ErrorMessage = "Wartość pomiędzy 1 a 10")]
             public byte MinPlayerNumber { get; set; }
 

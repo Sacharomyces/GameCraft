@@ -42,7 +42,7 @@
 
                     },
                     {
-                        data:"name"
+                        data:"genre.name"
                     },
                     {
                         
@@ -54,7 +54,7 @@
                     {
                         data: "id",
                         render: function(data) {
-                            return "<button class= 'btn-link js-delete' data-boardgame-id="+data+">Usuń</button>";
+                            return "<button class= 'btn-link js-delete' data-boardgame-id="+ data +">Usuń</button>";
                         }
                     }
                 ]
@@ -62,7 +62,7 @@
 
             $("#boardgames").on("click",".js-delete",function() {
 
-                    var button = (this);
+                    var button = $(this);
 
                     bootbox.confirm("Czy napewno chcesz usunąć grę?",
                         function(result) {

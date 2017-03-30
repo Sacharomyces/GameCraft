@@ -18,6 +18,8 @@ namespace GameCraft.App_Start
             CreateMap<BoardgameDto, Boardgame>().ForMember(m => m.Id, opt => opt.Ignore());
             CreateMap<Boardgame, Boardgame>();
             CreateMap<MembershipType, MembershipTypeDto>();
+            CreateMap<Genre, GenreDto>();
+
         }
     }
 }
