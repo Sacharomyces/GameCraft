@@ -115,3 +115,4 @@ C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\System.Web.Http.W
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\System.Net.Http.Formatting.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\System.Web.Http.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\System.Web.Http.WebHost.xml
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.seedUserRoles.resources
