@@ -7,13 +7,13 @@ namespace GameCraft.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class seedUserRoles : IMigrationMetadata
+    public sealed partial class SeedRolesAndInitialUsers : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(seedUserRoles));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(SeedRolesAndInitialUsers));
         
         string IMigrationMetadata.Id
         {
-            get { return "201703302220329_seedUserRoles"; }
+            get { return "201704031154259_SeedRolesAndInitialUsers"; }
         }
         
         string IMigrationMetadata.Source
