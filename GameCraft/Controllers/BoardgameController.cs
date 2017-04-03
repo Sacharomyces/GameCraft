@@ -34,7 +34,7 @@ namespace GameCraft.Controllers
         {
             var boardgames = _context.Boardgames.Include(b=>b.Genre).ToList();
 
-            if(User.IsInRole("CanManageBoardgames"))
+            if(User.IsInRole(RoleName.CanManageBoardgames))
                 return View("List");
             
             
@@ -75,7 +75,7 @@ namespace GameCraft.Controllers
             
             return RedirectToAction("Index","Boardgame");
         }
-        [Authorize(Roles = "CanManageBoardgames")]
+        [Authorize(Roles = RoleName.CanManageBoardgames)]
         public ActionResult New()
         {
             var boardgameFormViewModel = new BoardgamesFormViewModel()

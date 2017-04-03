@@ -71,3 +71,9 @@ C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\rosly
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\roslyn\vbc.rsp
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\AutoMapper.dll
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\AutoMapper.xml
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Web.Http.WebHost.xml
