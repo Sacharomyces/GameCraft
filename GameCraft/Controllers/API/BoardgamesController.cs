@@ -9,6 +9,7 @@ using GameCraft.Dtos;
 using System.Data.Entity;
 using GameCraft.Models;
 
+
 namespace GameCraft.Controllers.API
 {
     public class BoardgamesController:ApiController
@@ -39,6 +40,7 @@ namespace GameCraft.Controllers.API
             return Ok(boardgameDto);
         }
         [HttpPost]
+        [Authorize(Roles = RoleName.CanManageBoardgames)]
         public IHttpActionResult CreateBoardgame(BoardgameDto boardgameDto)
         {
             if (!ModelState.IsValid)
@@ -54,7 +56,9 @@ namespace GameCraft.Controllers.API
             return Created(new Uri(Request.RequestUri + "/" + boardgameDto.Id), boardgameDto);
 
         }
+
         [HttpPut]
+        [Authorize(Roles = RoleName.CanManageBoardgames)]
         public IHttpActionResult UpdateBoardgame(int id, BoardgameDto boardgameDto)
         {
             if (!ModelState.IsValid)
@@ -71,6 +75,7 @@ namespace GameCraft.Controllers.API
             return Ok();
         }
         [HttpDelete]
+        [Authorize(Roles = RoleName.CanManageBoardgames)]
         public IHttpActionResult DeleteBoardgame(int id)
         {
             var boardgameInDb = _context.Boardgames.SingleOrDefault(b => b.Id == id);

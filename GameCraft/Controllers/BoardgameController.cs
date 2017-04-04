@@ -46,6 +46,7 @@ namespace GameCraft.Controllers
         //[Route("Boardgames/Details/{id}")] - custom routing if needed
 
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageBoardgames)]
         public ActionResult Save(Boardgame boardgame)
         {
             if (!ModelState.IsValid)
@@ -87,6 +88,7 @@ namespace GameCraft.Controllers
             return View("BoardgameForm",boardgameFormViewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageBoardgames)]
         public ActionResult Edit(int id)
         {
             var boardgame = _context.Boardgames.SingleOrDefault(b => b.Id == id);
@@ -103,6 +105,7 @@ namespace GameCraft.Controllers
             return View("BoardgameForm",boardgameViewModel);
         }
 
+       
         public ActionResult Details (int id)
         {
 

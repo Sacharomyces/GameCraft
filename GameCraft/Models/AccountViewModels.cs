@@ -8,6 +8,10 @@ namespace GameCraft.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name ="Nazwa Użytkownika")]
+        public string UserName { get; set; }
     }
 
     public class ExternalLoginListViewModel
