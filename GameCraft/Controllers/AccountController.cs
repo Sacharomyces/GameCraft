@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using GameCraft.Models;
+using GameCraft.ViewModels;
+using GameCraft.ViewModels.Account;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace GameCraft.Controllers
