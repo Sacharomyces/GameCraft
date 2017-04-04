@@ -116,3 +116,8 @@ C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\System.Net.Http.F
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\System.Web.Http.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\System.Web.Http.WebHost.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.SeedRolesAndInitialUsers.resources
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.Ado.dll
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.AspNet.dll
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.Core.dll
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.EF6.dll
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.Mvc5.dll

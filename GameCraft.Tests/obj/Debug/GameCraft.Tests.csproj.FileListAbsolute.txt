@@ -77,3 +77,5 @@ C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\Syste
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Web.Http.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\Microsoft.Owin.Security.Facebook.xml
