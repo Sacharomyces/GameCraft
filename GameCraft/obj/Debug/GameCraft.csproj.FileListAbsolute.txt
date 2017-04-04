@@ -121,3 +121,5 @@ C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.AspNet.dl
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.Core.dll
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.EF6.dll
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.Mvc5.dll
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.addRentalModel.resources
+C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.AddNumberAvalablePropertyInBoardgame.resources

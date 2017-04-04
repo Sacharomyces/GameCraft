@@ -32,5 +32,7 @@ namespace GameCraft.Models
         [Required]
         [Display(Name = "Dostępna ilość")]
         public byte InStock { get; set; }
+
+        public byte NumberAvailable { get; set; }
     }
 }
