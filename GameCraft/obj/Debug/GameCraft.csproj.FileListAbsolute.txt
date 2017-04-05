@@ -28,7 +28,6 @@ C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.AspNet.
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.dll
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.Security.Cookies.dll
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.Security.dll
@@ -68,7 +67,6 @@ C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\EntityFramework.S
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.Security.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.Security.Facebook.xml
@@ -77,7 +75,6 @@ C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.Se
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.csprojResolveAssemblyReference.cache
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.dll
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.pdb
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\roslyn\csc.exe.config
@@ -116,10 +113,5 @@ C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\System.Net.Http.F
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\System.Web.Http.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\System.Web.Http.WebHost.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.SeedRolesAndInitialUsers.resources
-C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.Ado.dll
-C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.AspNet.dll
-C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.Core.dll
-C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.EF6.dll
-C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\bin\Glimpse.Mvc5.dll
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.addRentalModel.resources
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.AddNumberAvalablePropertyInBoardgame.resources

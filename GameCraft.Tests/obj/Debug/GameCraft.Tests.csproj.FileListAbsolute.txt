@@ -43,7 +43,6 @@ C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\Syste
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Web.WebPages.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\Microsoft.Owin.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\System.Web.Optimization.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Astaroth\Documents\Repo\Repos\GameCraft\GameCraft.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
