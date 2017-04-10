@@ -8,7 +8,7 @@ namespace GameCraft.Models
 {
     public class Rental
     {
-        public byte Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public Customer Customer { get; set; }

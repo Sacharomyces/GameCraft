@@ -46,7 +46,8 @@ namespace GameCraft.Controllers.API
                 {
                     Customer = customer,
                     Boardgame = boardgame,
-                    DateRented = DateTime.Now
+                    DateRented = DateTime.Now,
+                    
 
                 };
 

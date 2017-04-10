@@ -7,7 +7,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>Klienci</h2>
-
+<p>
+    @Html.ActionLink("Nowy Klient", "New", "Customer", null, new { @class = "btn btn-primary" })
+</p>
+  
     <table id="customers" class="table table-bordered table-hover">
         <thead>
             <tr>

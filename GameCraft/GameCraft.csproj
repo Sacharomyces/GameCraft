@@ -53,21 +53,18 @@
       <HintPath>..\packages\AutoMapper.5.2.0\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Glimpse.Ado, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Glimpse.Ado.1.7.1\lib\net45\Glimpse.Ado.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Glimpse.Ado, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.Ado.1.7.3\lib\net45\Glimpse.Ado.dll</HintPath>
     </Reference>
     <Reference Include="Glimpse.AspNet, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Glimpse.AspNet.1.9.0\lib\net45\Glimpse.AspNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Glimpse.Core, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Glimpse.1.8.5\lib\net45\Glimpse.Core.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Glimpse.Core, Version=1.8.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.1.8.6\lib\net45\Glimpse.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Glimpse.EF6, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Glimpse.EF6.1.6.2\lib\net45\Glimpse.EF6.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Glimpse.EF6, Version=1.6.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.EF6.1.6.5\lib\net45\Glimpse.EF6.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.7\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -249,10 +246,6 @@
     <Compile Include="Dtos\BoardgameDto.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
-    <Compile Include="Migrations\201704041600425_AddNumberAvalablePropertyInBoardgame.cs" />
-    <Compile Include="Migrations\201704041600425_AddNumberAvalablePropertyInBoardgame.Designer.cs">
-      <DependentUpon>201704041600425_AddNumberAvalablePropertyInBoardgame.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dtos\GenreDto.cs" />
     <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\RentalDto.cs" />
@@ -311,9 +304,9 @@
     <Compile Include="Migrations\201704031154259_SeedRolesAndInitialUsers.Designer.cs">
       <DependentUpon>201704031154259_SeedRolesAndInitialUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704041514513_addRentalModel.cs" />
-    <Compile Include="Migrations\201704041514513_addRentalModel.Designer.cs">
-      <DependentUpon>201704041514513_addRentalModel.cs</DependentUpon>
+    <Compile Include="Migrations\201704102243116_addRentalsAndNumberAvailable.cs" />
+    <Compile Include="Migrations\201704102243116_addRentalsAndNumberAvailable.Designer.cs">
+      <DependentUpon>201704102243116_addRentalsAndNumberAvailable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -713,11 +706,8 @@
     <EmbeddedResource Include="Migrations\201704031154259_SeedRolesAndInitialUsers.resx">
       <DependentUpon>201704031154259_SeedRolesAndInitialUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704041514513_addRentalModel.resx">
-      <DependentUpon>201704041514513_addRentalModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704041600425_AddNumberAvalablePropertyInBoardgame.resx">
-      <DependentUpon>201704041600425_AddNumberAvalablePropertyInBoardgame.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704102243116_addRentalsAndNumberAvailable.resx">
+      <DependentUpon>201704102243116_addRentalsAndNumberAvailable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

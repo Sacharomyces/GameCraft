@@ -80,7 +80,7 @@ namespace GameCraft.Controllers
                 customerInDb.MembershipTypeId = customer.MembershipTypeId;
                 customerInDb.MembershipTypeId = customer.MembershipTypeId; */
 
-                Mapper.Map(customer, customerInDb);
+                Mapper.Map(customer,customerInDb);
 
 
             }

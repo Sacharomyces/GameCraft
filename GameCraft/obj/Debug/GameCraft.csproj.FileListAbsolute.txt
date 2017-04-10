@@ -237,8 +237,7 @@ E:\Programowanie\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.C
 E:\Programowanie\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.ChangeEkonomiczneGenreValue.resources
 E:\Programowanie\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.ChangeEkonomiczneGenreValueforce.resources
 E:\Programowanie\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.SeedRolesAndInitialUsers.resources
-E:\Programowanie\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.addRentalModel.resources
-E:\Programowanie\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.AddNumberAvalablePropertyInBoardgame.resources
 E:\Programowanie\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.csproj.GenerateResource.Cache
 E:\Programowanie\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.dll
 E:\Programowanie\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.pdb
+E:\Programowanie\Repo\Repos\GameCraft\GameCraft\obj\Debug\GameCraft.Migrations.addRentalsAndNumberAvailable.resources

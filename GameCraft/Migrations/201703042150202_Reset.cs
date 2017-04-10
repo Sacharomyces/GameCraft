@@ -8,21 +8,21 @@ namespace GameCraft.Migrations
         public override void Up()
             
         {
-            /*
-          //  CreateTable(
-               // "dbo.Boardgames",
-               // c => new
+            
+           CreateTable(
+               "dbo.Boardgames",
+                c => new
                     {
-                   //     Id = c.Int(nullable: false, identity: true),
-                  //      Name = c.String(nullable: false),
-                    //    MinPlayerNumber = c.Byte(nullable: false),
-//MaxPlayerNumber = c.Byte(nullable: false),
-               //         InStock = c.Byte(nullable: false),
-               //         Genre_Id = c.Byte(),
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false),
+                        MinPlayerNumber = c.Byte(nullable: false),
+MaxPlayerNumber = c.Byte(nullable: false),
+                        InStock = c.Byte(nullable: false),
+                        Genre_Id = c.Byte(),
                     })
-               // .PrimaryKey(t => t.Id)
-              //  .ForeignKey("dbo.Genres", t => t.Genre_Id)
-              //  .Index(t => t.Genre_Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Genres", t => t.Genre_Id)
+                .Index(t => t.Genre_Id);
             
             CreateTable(
                 "dbo.Genres",
@@ -126,7 +126,7 @@ namespace GameCraft.Migrations
                 .PrimaryKey(t => new { t.LoginProvider, t.ProviderKey, t.UserId })
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId);
-            */
+            
         }
         
         public override void Down()
