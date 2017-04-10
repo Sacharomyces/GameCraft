@@ -65,8 +65,12 @@ namespace GameCraft.Controllers
                 
                 var boardgameInDb = _context.Boardgames.Single(b => b.Id == boardgame.Id);
 
-               Mapper.Map(boardgame,boardgameInDb);
-              
+                boardgameInDb.Name = boardgame.Name;
+                boardgameInDb.GenreId = boardgame.GenreId;
+                boardgameInDb.InStock = boardgame.InStock;
+                boardgameInDb.MaxPlayerNumber = boardgame.MaxPlayerNumber;
+                boardgameInDb.MinPlayerNumber = boardgame.MinPlayerNumber;
+
             }
            
            

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.UI.WebControls;
+using AutoMapper;
 using GameCraft.Dtos;
 using GameCraft.Models;
 
@@ -17,6 +18,16 @@ namespace GameCraft.Controllers.API
         {
             _context = new ApplicationDbContext();
         }
+
+
+        public IHttpActionResult GetRentals()
+        {
+            var rentalsInDb =  _context.Rentals.ToList();
+            
+
+            return Ok(rentalsInDb);
+        }
+
         [HttpPost]
         public IHttpActionResult CreateRental(RentalDto newRental)
         {
@@ -27,7 +38,7 @@ namespace GameCraft.Controllers.API
             foreach ( var boardgame in boardgames)
             {
                 if (boardgame.NumberAvailable == 0)
-                    return BadRequest("Movie is not available");
+                    return BadRequest("Boardgame is not available");
 
                 boardgame.NumberAvailable--;
 

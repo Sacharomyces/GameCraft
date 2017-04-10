@@ -5,17 +5,108 @@
 
 <h2>Nowe Wypożyczenie</h2>
 
-<form>
+<form id="Rental">
     <div class="form-group">
         <label>Klient</label>
-        <input type="text" value="" class="form-control" />
+        <div class="tt-container">
+            <input id="customer" type="text" value="" class="form-control" />
+        </div>
     </div>
 
     <div class="form-group">
         <label>Gra Planszowa</label>
-        <input type="text" value="" class="form-control" />
+        <div class="tt-container">
+            <input id="boardgame" type="text" value="" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <ul id="boardgames" class="list-group"></ul>
+        </div>
     </div>
 
     <button class="btn btn-primary">Wypożycz</button>
 
 </form>
+
+@section scripts
+{
+    <script>
+
+        $(document).ready(function() {
+
+            var viewModel = {
+                boardgameIds: []
+            }; //view Model on a client side
+
+            var customers = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                remote: {
+                    url: '/api/customers?query=%QUERY',
+                    wildcard: '%QUERY'
+                }
+            });
+
+            $('#customer').typeahead({
+                    minLenght: 3,
+                    highlight: true
+                },
+                {
+                    name: 'customers',
+                    display: 'name',
+                    source: customers
+                }).on("typeahead:select",
+                function(event, customer) {
+
+                    viewModel.customerId = customer.id;
+                });
+
+            var boardgames = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                remote: {
+                    url: '/api/boardgames?query=%QUERY',
+                    wildcard: '%QUERY'
+                }
+            });
+
+            $('#boardgame').typeahead({
+                    minLenght: 3,
+                    highlight: true
+                },
+                {
+                    name: 'boardgames',
+                    display: 'name',
+                    source: boardgames
+                }).on("typeahead:select",
+                function(event, boardgame) {
+
+                    $("#boardgames").append("<li class='list-group-item'>" + boardgame.name + "</li>");
+
+                    $("#boardgame").typeahead("val", "");
+
+                    viewModel.boardgameIds.push(boardgame.id);
+                });
+            $("#Rental").submit(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                        url: "/api/Rentals",
+                        method: "post",
+                        data: viewModel
+                    })
+                    .done(function() {
+                        toastr.success("Zapisano wypożyczenie.");
+                    })
+                    .fail(function() {
+                        toastr.error("Wypożyczenie nie zostało zapisane z powdou błędu.");
+                    });
+            });
+        });
+    </script>
+}
+
+
+
+

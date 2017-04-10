@@ -23,7 +23,7 @@ else
         @Html.ValidationMessageFor(m=>m.Name)
     </div> 
     <div class="form-group">
-        @Html.Label("Wypełnij")
+        @Html.Label("Kategoria")
         @Html.DropDownListFor(m => m.GenreId, new SelectList(Model.Genres,"Id","Name"),"wybierz kategorię...", new { @class="form-control"})
         @Html.ValidationMessageFor(m => m.GenreId)
     </div>

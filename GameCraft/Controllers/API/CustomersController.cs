@@ -21,12 +21,15 @@ namespace GameCraft.Controllers.API
         }
     
         //GET /api/customers
-        public IHttpActionResult  GetCustomers()
+        public IHttpActionResult  GetCustomers(string query = null)
         {
-            var customersDTos = _context.Customers
-                .Include(c=>c.MembershipType)
-                .ToList()
-                .Select(Mapper.Map<Customer, CustomerDto>);
+            var customersQuery = _context.Customers
+                .Include(c => c.MembershipType);
+
+            if (!String.IsNullOrWhiteSpace(query))
+                customersQuery = customersQuery.Where(c => c.Name.Contains(query));
+
+            var customersDTos = customersQuery.ToList().Select(Mapper.Map<Customer, CustomerDto>);
 
             return Ok (customersDTos);
         }

@@ -90,6 +90,7 @@ namespace GameCraft.Controllers
                 case SignInStatus.Failure:
                 default:
                     ModelState.AddModelError("", "Invalid login attempt.");
+                    ViewBag.ReturnUrl = returnUrl;
                     return View(model);
             }
         }
@@ -172,7 +173,7 @@ namespace GameCraft.Controllers
                 AddErrors(result);
             }
             // If we got this far, something failed, redisplay form
-            return View(model);
+            return View (model);
         }
 
         //

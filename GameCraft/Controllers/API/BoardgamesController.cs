@@ -20,11 +20,16 @@ namespace GameCraft.Controllers.API
         {
             _context = new ApplicationDbContext();
         }
-        public IHttpActionResult GetBoardgames()
+        public IEnumerable<BoardgameDto> GetBoardgames(string query = null)
         {
-            var boardgames = _context.Boardgames.Include(b=>b.Genre).ToList().Select(Mapper.Map<Boardgame,BoardgameDto>);
+            var boardgamesQuery = _context.Boardgames.Include(b => b.Genre).Where(b => b.NumberAvailable > 0);
 
-            return Ok(boardgames);
+            if (!String.IsNullOrWhiteSpace(query))
+                boardgamesQuery = boardgamesQuery.Where(b => b.Name.Contains(query));
+
+            var boardgamesDto = boardgamesQuery.ToList().Select(Mapper.Map<Boardgame, BoardgameDto>);
+
+            return (boardgamesDto);
         }
 
         public IHttpActionResult GetBoardgame(int id)
